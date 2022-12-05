@@ -1,20 +1,36 @@
+Demo/SudokuPrx.java
+ Demo.SudokuPrx
+model/Grid.java
+ model.Grid
+Demo/CallbackPrx.java
+ Demo.CallbackPrx
+Demo/_SudokuPrxI.java
+ Demo._SudokuPrxI
+utils/SudokuChecker.java
+ utils.SudokuChecker
+error/InvalidSudokuException.java
+ error.InvalidSudokuException
+model/Cell.java
+ model.Cell
 Demo/Sudoku.java
  Demo.Sudoku
  Demo.Sudoku$1
-Demo/SudokuPrx.java
- Demo.SudokuPrx
+utils/SudokuConverter.java
+ utils.SudokuConverter
+solver/Solver.java
+ solver.Solver
+printer/Printer.java
+ printer.Printer
 Demo/Callback.java
  Demo.Callback
  Demo.Callback$1
-Demo/CallbackPrx.java
- Demo.CallbackPrx
 Demo/_CallbackPrxI.java
  Demo._CallbackPrxI
-Demo/_SudokuPrxI.java
- Demo._SudokuPrxI
-Server.java
- Server
-utils/SudokuConverter.java
- utils.SudokuConverter
+solver/SolverThread.java
+ solver.SolverThread
+model/SolutionListener.java
+ model.SolutionListener
 SudokuI.java
  SudokuI
+Server.java
+ Server
