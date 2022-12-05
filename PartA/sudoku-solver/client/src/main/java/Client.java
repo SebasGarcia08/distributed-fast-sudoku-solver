@@ -38,7 +38,7 @@ public class Client {
     public static void run(Demo.SudokuPrx printer, Demo.CallbackPrx callPrx) {
 
         System.out.println("\n-------------------------------------------------- \n");
-        System.out.println("HELLO " + hostname+"\nThe sudoku written in"+INPUT_PATH+"is being loaded...\n");
+        System.out.println("HELLO " + hostname+"\nThe sudoku written in"+INPUT_PATH+" is being loaded...\n");
 
        
         String sudoku = loadSudoku();
