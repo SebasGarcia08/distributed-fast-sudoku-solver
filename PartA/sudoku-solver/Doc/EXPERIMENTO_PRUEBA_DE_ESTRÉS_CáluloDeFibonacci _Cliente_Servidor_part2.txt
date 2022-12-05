@@ -1,0 +1,91 @@
+**************************************
+
+EXPERIMENTO PRUEBA DE ESTRÉS
+Cálculo de Fibonacci (Cliente-Servidor)
+Nicolás Penagos - Danna García 
+
+**************************************
+
+I. OBJETIVO:
+
+Comparar el comportamiento del algoritmo con implementación multihilo con respecto al experimento anterior, al hacer el envío de sus mensajes al mismo tiempo para calcular la serie de Fibonacci de números grandes.
+
+II. METODOLOGÍA:
+
+Se realizan peticiones de la serie de Fibonacci para números grandes a un servidor con un multiples hilo de procesamiento. Se toma como caso base los mismos tratamientos que el experimento anterior. Sim embargo, para propositos experimentales se descartan los tratamientos no proporcionan hallazgos significativos o que por cuestiones de memoria no fueron posibles culminar.
+
+
+
+
+III. RESULTADOS: 
+
+-------------------------------------
+
+1. Para n = 10000 y 4 máquinas
+
+hgrid3
+Number: 10000
+Time: 10567 ms 
+
+hgrid12
+Number: 10000
+Time: 11890 ms 
+
+hgrid13
+Number: 10000
+Time: 11885 ms 
+
+hgrid14
+Number: 10000
+Time: 11450 ms 
+
+-------------------------------------
+
+2. Para n = 25000 y 4 máquinas
+
+hgrid3
+Number: 25000
+Time: 77213 ms 
+
+hgrid12
+Number: 25000
+Time: 79795 ms 
+
+hgrid13
+Number: 25000
+Time: 79747 ms 
+
+hgrid14
+Number: 25000
+Time: 79358 ms
+
+-------------------------------------
+
+3. Para n = 35000 y 4 máquinas
+
+hgrid3
+Number: 35000
+Time: 164685 ms 
+
+hgrid12
+Number: 35000
+Time: 167602 ms 
+
+hgrid13
+Number: 35000
+Time: 166909 ms 
+
+hgrid14
+Number: 35000
+Time: 164454 ms
+
+
+-------------------------------------
+
+IV. CONCLUSIONES:
+
+1. El servidor atiende a varias máquinas de forma concurrente, esto se puede evidenciar en los tiempos similares de respuesta (ya no es una relación ascendente de acuerdo al orden de llamada). Sin embargo, cabe mencionar que esta concurrencia solo es real hasta cierto número de hilos que se corresponden con el número de cores del procesador, después de este punto, los hilos se encolan entre los cores disponibles y la concurrencia real se pierde. 
+
+2. Dado que todos los clientes son atendidos, la excepción de time out ya no es lanzada.
+
+3. La nueva limitación con esta nueva implementacion pasa a ser la memoria es saturada al imprimir numeros tan grandes en consola.

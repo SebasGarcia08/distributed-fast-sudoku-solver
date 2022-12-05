@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: Server
+Class-Path: file:/Users/nicolaspenagos/.gradle/caches/modules-2/files-2.
+ 1/com.zeroc/ice/3.7.7/e76273cd2cf76a4bf3f007ac637f744232c5a9aa/ice-3.7.
+ 7.jar
+

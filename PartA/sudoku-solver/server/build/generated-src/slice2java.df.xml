@@ -1,0 +1,15 @@
+<state>
+  <timestamp value='1670213795374' />
+  <sourceSet name='default'>
+    <source name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/Printer.ice'>
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/Callback.java' />
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/Sudoku.java' />
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/CallbackPrx.java' />
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/_CallbackPrxI.java' />
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/SudokuPrx.java' />
+      <file name='/Users/nicolaspenagos/Documents/ArquiSoft/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/_SudokuPrxI.java' />
+    </source>
+    <arg value='/usr/local/bin/slice2java' />
+    <arg value='-I/usr/local/share/ice/slice' />
+  </sourceSet>
+</state>
