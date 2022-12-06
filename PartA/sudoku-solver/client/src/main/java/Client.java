@@ -13,7 +13,8 @@ public class Client {
                 extraArgs)) {
 
             // Printer configuration
-            Demo.SudokuPrx twoway = Demo.SudokuPrx.checkedCast(communicator.propertyToProxy("Printer.Proxy")).ice_twoway().ice_secure(false);
+            Demo.SudokuPrx twoway = Demo.SudokuPrx.checkedCast(communicator.propertyToProxy("Printer.Proxy"))
+                    .ice_twoway().ice_secure(false);
             Demo.SudokuPrx printer = twoway.ice_twoway();
 
             if (printer == null) {
@@ -34,27 +35,21 @@ public class Client {
         }
     }
 
-
     public static void run(Demo.SudokuPrx printer, Demo.CallbackPrx callPrx) {
 
         System.out.println("\n-------------------------------------------------- \n");
-        System.out.println("HELLO " + hostname+"\nThe sudoku written in"+INPUT_PATH+" is being loaded...\n");
+        System.out.println("HELLO " + hostname + "\nThe sudoku written in" + INPUT_PATH + " is being loaded...\n");
 
-       
         String sudoku = loadSudoku();
         int side = sudoku.indexOf("\n");
 
-        System.out.println("INPUT:\n\n"+sudoku+"\nWith a side length of "+side);
+        System.out.println("INPUT:\n\n" + sudoku + "\nWith a side length of " + side);
         System.out.println("\n-------------------------------------------------- \n");
 
         printer.solveSudoku(sudoku, callPrx);
 
-
-
-
     }
 
-  
     public static String getHostname(String m) {
 
         String str = null, output = "";
@@ -76,39 +71,30 @@ public class Client {
         return output;
     }
 
-    public static String loadSudoku(){
+    public static String loadSudoku() {
 
         String sudoku = "";
 
         File file = new File(INPUT_PATH);
 
-        try{
+        try {
 
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
-          
-            while ((line = reader.readLine()) != null){
 
-                sudoku+=line+'\n';
+            while ((line = reader.readLine()) != null) {
+
+                sudoku += line + '\n';
 
             }
 
-
-        }catch(FileNotFoundException fileNotFoundException){
+        } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("ERROR: The file input.txt was not found");
-        }catch(IOException ioException){
+        } catch (IOException ioException) {
 
         }
 
-            
-        
-
         return sudoku;
     }
-
-
-      
-       
-
 
 }

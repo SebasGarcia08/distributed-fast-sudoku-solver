@@ -5,24 +5,24 @@ import java.util.stream.Collectors;
 
 public class SudokuChecker {
 
-    public static boolean isSudoku(int [] cellValues){
+    public static boolean isSudoku(int[] cellValues) {
 
         List<Integer> listCellValue = Arrays.stream(cellValues).boxed().collect(Collectors.toList());
-        if(!checkBoxes(listCellValue)){
+        if (!checkBoxes(listCellValue)) {
             return false;
         }
-        if(!checkRowsHorizontally(listCellValue)){
+        if (!checkRowsHorizontally(listCellValue)) {
             return false;
         }
 
         return (checkRowsVertically(listCellValue));
     }
 
-    private static boolean checkRowsHorizontally(List<Integer> cellValues){
+    private static boolean checkRowsHorizontally(List<Integer> cellValues) {
 
-        for(int i = 0; i < cellValues.size(); i = i + 9){
-            List <Integer> row = cellValues.subList(i, i+9);
-            if(checkDuplicates(row)){
+        for (int i = 0; i < cellValues.size(); i = i + 9) {
+            List<Integer> row = cellValues.subList(i, i + 9);
+            if (checkDuplicates(row)) {
                 return false;
             }
 
@@ -31,59 +31,56 @@ public class SudokuChecker {
 
     }
 
-    private static boolean checkRowsVertically(List <Integer> cellValues){
+    private static boolean checkRowsVertically(List<Integer> cellValues) {
 
-        for(int i = 0; i < 9; i ++ ){
+        for (int i = 0; i < 9; i++) {
             List<Integer> row = new ArrayList<>();
-           for(int j = i; j < cellValues.size(); j+=9){
-                   row.add(cellValues.get(j));
-               }
-           if(checkDuplicates(row)){
-               return false;
-           }
+            for (int j = i; j < cellValues.size(); j += 9) {
+                row.add(cellValues.get(j));
+            }
+            if (checkDuplicates(row)) {
+                return false;
+            }
         }
         return true;
     }
 
-    private static boolean checkBoxes(List <Integer> cellValues){
+    private static boolean checkBoxes(List<Integer> cellValues) {
 
-
-        for(int i = 0; i < cellValues.size(); i += 27) {
+        for (int i = 0; i < cellValues.size(); i += 27) {
             List<Integer> box = new ArrayList<>();
-            for(int j = i; j < i + 27; j+=9) {
+            for (int j = i; j < i + 27; j += 9) {
                 box.add(cellValues.get(j));
                 box.add(cellValues.get(j + 1));
                 box.add(cellValues.get(j + 2));
             }
-            if(checkDuplicates(box)){
+            if (checkDuplicates(box)) {
                 return false;
             }
 
-
         }
 
-        for(int i = 3; i < cellValues.size(); i += 27) {
+        for (int i = 3; i < cellValues.size(); i += 27) {
             List<Integer> box = new ArrayList<>();
-            for(int j = i; j < i + 27; j+=9) {
+            for (int j = i; j < i + 27; j += 9) {
                 box.add(cellValues.get(j));
                 box.add(cellValues.get(j + 1));
                 box.add(cellValues.get(j + 2));
             }
-            if(checkDuplicates(box)){
+            if (checkDuplicates(box)) {
                 return false;
             }
 
-
         }
 
-        for(int i = 6; i < cellValues.size(); i += 27) {
+        for (int i = 6; i < cellValues.size(); i += 27) {
             List<Integer> box = new ArrayList<>();
-            for(int j = i; j < i + 27; j+=9) {
+            for (int j = i; j < i + 27; j += 9) {
                 box.add(cellValues.get(j));
                 box.add(cellValues.get(j + 1));
                 box.add(cellValues.get(j + 2));
             }
-            if(checkDuplicates(box)){
+            if (checkDuplicates(box)) {
                 return false;
             }
 
@@ -92,8 +89,7 @@ public class SudokuChecker {
         return true;
     }
 
-    private static boolean checkDuplicates(List <Integer> collection){
-
+    private static boolean checkDuplicates(List<Integer> collection) {
 
         for (int j = 1; j <= 9; j++) {
             if (Collections.frequency(collection, j) > 1) {
@@ -103,5 +99,5 @@ public class SudokuChecker {
         return false;
 
     }
-    
+
 }

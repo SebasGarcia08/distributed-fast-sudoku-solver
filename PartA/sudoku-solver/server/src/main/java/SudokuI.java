@@ -7,6 +7,7 @@ import java.io.Console;
 import java.util.Arrays;
 import solver.Solver;
 import solver.SolverThread;
+
 /*
  * MESSAGE FROM CLIENT
  */
@@ -17,6 +18,11 @@ public class SudokuI implements Demo.Sudoku, SolutionListener {
         long startTime = System.currentTimeMillis();
 
         int[] sudokuBoardArray = SudokuConverter.getArrayFromString(msg);
+
+        for (int i = 0; i < sudokuBoardArray.length; i++) {
+            System.out.println(sudokuBoardArray[i]);
+        }
+
         Grid grid = new Grid(sudokuBoardArray);
         Solver solver = new Solver(grid);
 
@@ -28,11 +34,10 @@ public class SudokuI implements Demo.Sudoku, SolutionListener {
     }
 
     @Override
-    public void solutionFound(int[] solution, int threadsUsed,  Demo.CallbackPrx callback, long startTime) {
+    public void solutionFound(int[] solution, int threadsUsed, Demo.CallbackPrx callback, long startTime) {
 
-        System.out.println("\nSolved in "+(System.currentTimeMillis()-startTime)+"ms: ");
+        System.out.println("\nSolved in " + (System.currentTimeMillis() - startTime) + "ms: ");
         Printer.writeSudoku(Printer.fromArrayToString(solution));
-        
 
     }
 
