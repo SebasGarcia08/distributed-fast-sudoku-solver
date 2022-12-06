@@ -17,9 +17,9 @@ java -jar server/build/libs/server.jar
 
 ```sh
 java -jar client/build/libs/client.jar
+```
 
-
-### Integrantes
+#Integrantes
 
 Sebastián García
 Nicolás Penangos
