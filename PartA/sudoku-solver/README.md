@@ -17,3 +17,11 @@ java -jar server/build/libs/server.jar
 
 ```sh
 java -jar client/build/libs/client.jar
+
+
+### Integrantes
+
+Sebastián García
+Nicolás Penangos
+Alejandra Díaz
+Danna García
