@@ -1,2 +1,5 @@
 # distributed-fast-sudoku-solver
-Fast sudoku solver with a distributed architecture
+
+by Sebastian Garcia, Nicolas Penagos, Danna Garcia and Alejandra Diaz
+
+#### Fast sudoku solver with a distributed architecture
