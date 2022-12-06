@@ -22,7 +22,7 @@ public class SolverThread implements Runnable {
     private Demo.CallbackPrx callback;
     private long startTime;
     private HashSet<Grid> solutions;
-    private int maxSolutions = 1;
+    private int maxSolutions = -1;
 
     public SolverThread(Solver solver) {
         this.solver = solver;
@@ -72,7 +72,7 @@ public class SolverThread implements Runnable {
                 // solutions.size());
             }
         }
-        if (solutions.size() >= maxSolutions) {
+        if (maxSolutions > 0 && solutions.size() >= maxSolutions) {
             // System.out.println("Max solutions reached: " + solutions.size() + ", threads
             // used: " + threadsUsed);
         } else {
