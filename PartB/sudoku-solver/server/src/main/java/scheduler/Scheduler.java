@@ -142,6 +142,11 @@ public class Scheduler {
                 Grid forkGrid = new Grid(cellValues);
                 forkGrid.getCell(x, y).setValue(value);
                 String forkGridString =  SudokuConverter.getStringFromArray(forkGrid.translateCells());
+
+                // Here the scheduler decides which worker to send the task to
+                // TODO: Send forkGridString to worker
+                // the Worker is very similar to Part A's, but it has to return the response to the scheduler
+                // instead of the client 
                 workerCallback.response(forkGridString);
             }
         }

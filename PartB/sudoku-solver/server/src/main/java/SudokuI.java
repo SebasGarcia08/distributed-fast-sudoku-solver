@@ -37,6 +37,8 @@ public class SudokuI implements Demo.Sudoku, SolutionListener {
         <sudokuBoardSolution>
         */
 
+        // TODO: handle edge format cases
+
         String[] parts = msg.split(":");
 
         if (parts[0] == "client") {
