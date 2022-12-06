@@ -1,13 +1,13 @@
 <state>
-  <timestamp value='1670306391040' />
+  <timestamp value='1670307447462' />
   <sourceSet name='default'>
-    <source name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/Printer.ice'>
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/Callback.java' />
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/Sudoku.java' />
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/CallbackPrx.java' />
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/_CallbackPrxI.java' />
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/SudokuPrx.java' />
-      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/PartA/sudoku-solver/server/build/generated-src/Demo/_SudokuPrxI.java' />
+    <source name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/Printer.ice'>
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/Callback.java' />
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/Sudoku.java' />
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/CallbackPrx.java' />
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/_CallbackPrxI.java' />
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/SudokuPrx.java' />
+      <file name='/home/sebastiangarcia/Documents/u/7/arquisoft/sudoku-solver/distributed-fast-sudoku-solver/ParteB/sudoku-solver/server/build/generated-src/Demo/_SudokuPrxI.java' />
     </source>
     <arg value='/usr/bin/slice2java' />
     <arg value='-I/usr/share/ice/slice' />

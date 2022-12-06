@@ -23,9 +23,29 @@ public class SudokuConverter {
 
     }
 
-    public static String getStringFromArray(int[] sudokuBoardArray) {
 
-        // TODO 
+
+    public static String getStringFromArray(int[] sudokuBoardArray){
+
+        final int BOARD_SIZE = sudokuBoardArray.length;
+        final int SIDE = (int) Math.sqrt(sudokuBoardArray.length);
+
+        String newline = "\n";
+        StringBuilder sb = new StringBuilder();
+
+        for(int i=0; i<BOARD_SIZE; i++){
+
+            if(sudokuBoardArray[i]==0)
+                sb.append(",");
+            else
+                sb.append(sudokuBoardArray[i]);
+
+            if((i+1)%SIDE==0) 
+                sb.append(newline);
+            
+        }
+
+        return sb.toString();
 
     }
 
