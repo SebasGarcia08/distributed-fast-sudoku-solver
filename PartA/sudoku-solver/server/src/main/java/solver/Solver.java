@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
 public class Solver {
 
     private Grid grid;
@@ -22,8 +21,8 @@ public class Solver {
 
     public boolean isValueLegal(int x, int y, int value) {
         return grid.getCol(x).stream().noneMatch(k -> k.getValue() == value) &&
-               grid.getRow(y).stream().noneMatch(k -> k.getValue() == value) &&
-               grid.getBox(grid.getBoxIdBy(x, y)).stream().noneMatch(k -> k.getValue() == value);
+                grid.getRow(y).stream().noneMatch(k -> k.getValue() == value) &&
+                grid.getBox(grid.getBoxIdBy(x, y)).stream().noneMatch(k -> k.getValue() == value);
     }
 
     public void fillWithPossibilities() {
@@ -31,11 +30,11 @@ public class Solver {
 
         for (Cell cell : grid.getCells()) {
             cell.getPossibilities().clear();
-            if (cell.getValue() == 0) {
-                for (int value = 1; value <= 9; value++) {
-                    if (isValueLegal(cell.getX(), cell.getY(), value)) {
-                        cell.getPossibilities().add(value);
-                    }
+            if (cell.getValue() != 0)
+                continue;
+            for (int value = 1; value <= 9; value++) {
+                if (isValueLegal(cell.getX(), cell.getY(), value)) {
+                    cell.getPossibilities().add(value);
                 }
             }
         }
@@ -43,7 +42,8 @@ public class Solver {
 
     public void countSolved(List<Cell> cells) {
 
-        List<Cell> emptyCells = cells.stream().filter(x -> x.getValue() == 0).collect(Collectors.toList());
+        List<Cell> emptyCells = cells.stream().filter(
+                x -> x.getValue() == 0).collect(Collectors.toList());
         Map<Integer, Integer> occurrences = new HashMap<>();
         for (Cell cell : emptyCells) {
             for (Integer possibility : cell.getPossibilities()) {
@@ -56,9 +56,13 @@ public class Solver {
 
     private void updateSolved(List<Cell> cells, Map<Integer, Integer> occurrences) {
 
-        List<Integer> values = occurrences.entrySet().stream().filter(element -> element.getValue() == 1)
-                        .map(Map.Entry::getKey)
-                        .collect(Collectors.toList());
+        List<Integer> values = occurrences.entrySet().stream()
+                .filter(
+                        element -> element.getValue() == 1)
+                .map(
+                        Map.Entry::getKey)
+                .collect(Collectors.toList());
+
         for (Integer value : values) {
             for (Cell cell : cells) {
                 if (cell.getPossibilities().contains(value)) {
@@ -89,7 +93,7 @@ public class Solver {
 
     private boolean isSolved() {
         return Stream.of(grid.getCells()).allMatch(x -> x.getValue() != 0) &&
-               SudokuChecker.isSudoku(grid.translateCells());
+                SudokuChecker.isSudoku(grid.translateCells());
     }
 
     public Grid getGrid() {

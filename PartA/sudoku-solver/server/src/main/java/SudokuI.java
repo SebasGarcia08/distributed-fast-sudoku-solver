@@ -19,10 +19,6 @@ public class SudokuI implements Demo.Sudoku, SolutionListener {
 
         int[] sudokuBoardArray = SudokuConverter.getArrayFromString(msg);
 
-        for (int i = 0; i < sudokuBoardArray.length; i++) {
-            System.out.println(sudokuBoardArray[i]);
-        }
-
         Grid grid = new Grid(sudokuBoardArray);
         Solver solver = new Solver(grid);
 

@@ -1,5 +1,5 @@
-SudokuI.java
- SudokuI
+model/Grid.java
+ model.Grid
 model/SolutionListener.java
  model.SolutionListener
 Demo/CallbackPrx.java
@@ -8,8 +8,8 @@ Demo/_SudokuPrxI.java
  Demo._SudokuPrxI
 Demo/_CallbackPrxI.java
  Demo._CallbackPrxI
-solver/SolverThread.java
- solver.SolverThread
+utils/SudokuChecker.java
+ utils.SudokuChecker
 model/Cell.java
  model.Cell
 Demo/Sudoku.java
@@ -24,13 +24,13 @@ printer/Printer.java
 Demo/Callback.java
  Demo.Callback
  Demo.Callback$1
-Server.java
- Server
-error/InvalidSudokuException.java
- error.InvalidSudokuException
 solver/Solver.java
  solver.Solver
-model/Grid.java
- model.Grid
-utils/SudokuChecker.java
- utils.SudokuChecker
+error/InvalidSudokuException.java
+ error.InvalidSudokuException
+Server.java
+ Server
+SudokuI.java
+ SudokuI
+solver/SolverThread.java
+ solver.SolverThread
